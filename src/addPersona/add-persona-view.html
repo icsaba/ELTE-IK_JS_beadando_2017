@@ -1,0 +1,36 @@
+<div>
+    <h2>Add/modify Persona</h2>
+    <form ng-submit="$ctrl.addPersona()" name="personaForm">
+        <fieldset>
+            <div class="form-group" ng-class="{'has-success': $ctrl.state == 'success'}">
+                <label for="first_name">First Name</label>
+                <input type="text" id="first_name" class="form-control" ng-model="::$ctrl.persona.firstName" placeholder="first name" required>
+            </div>
+            <div class="form-group" ng-class="{'has-success': $ctrl.state == 'success'}">
+                <label for="last_name">First Name</label>
+                <input type="text" id="last_name" class="form-control" ng-model="::$ctrl.persona.lastName" placeholder="last name" required>
+            </div>
+            <div class="form-group" ng-class="{'has-success': $ctrl.state == 'success'}">
+                <label for="email">Email</label>
+                <input type="text" id="email" class="form-control" ng-model="::$ctrl.persona.email" placeholder="email" required>
+            </div>
+            <div class="form-group" ng-class="{'has-success': $ctrl.state == 'success'}">
+                <label for="gender">Gender</label>
+                <select ng-options="option for option in $ctrl.genderOptions" id="gender" ng-model="::$ctrl.persona.gender" class="form-control" required></select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="form-control" ng-disabled="$ctrl.editPersona">
+                    <span class="glyphicon" ng-class="{'glyphicon-plus': $ctrl.state == 'valid', 'glyphicon-ok': $ctrl.state == 'success'}" aria-hidden="true"></span>
+                    Save
+                </button>
+            </div>
+            </div>
+            <div class="form-group" ng-if="$ctrl.editPersona">
+                <button class="form-control" ng-click="$ctrl.selectNone()">
+                    <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span>
+                    Cancel
+                </button>
+            </div>
+        </fieldset>
+    </form>
+</div>

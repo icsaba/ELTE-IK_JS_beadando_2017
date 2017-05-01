@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <add-persona save="$ctrl.savePersona($persona)" cancel="$ctrl.cancel()" persona="$ctrl.selectedPersona"></add-persona>
+        </div>
+        <div class="col-md-8">
+            <h2>
+                Personas
+            </h2>
+            <div ng-repeat="persona in $ctrl.personas track by $index">
+                <persona details="persona" click="$ctrl.selectPersona($persona)"></persona>
+            </div>
+        </div>
+    </div>
+</div>

@@ -21,6 +21,7 @@
   "dependencies": {
     "angular": "^1.6.2",
     "angular-route": "^1.6.3",
+    "angular-ui-bootstrap": "^2.5.0",
     "bootstrap": "^3.3.7",
     "koa": "^2.0.1",
     "mongodb": "^2.2.24"
@@ -30,6 +31,7 @@
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.0",
     "babel-preset-env": "^1.2.1",
+    "css-loader": "^0.28.0",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.2"
   }
