@@ -7,9 +7,7 @@
             <h2>
                 Personas
             </h2>
-            <div ng-repeat="persona in $ctrl.personas track by $index">
-                <persona details="persona" click="$ctrl.selectPersona($persona)"></persona>
-            </div>
+            <persona details="persona" click="$ctrl.selectPersona($persona)" ng-repeat="persona in $ctrl.personas track by $index"></persona>
         </div>
     </div>
 </div>

@@ -1,0 +1,16 @@
+.persona {
+    display: inline;
+    padding: 5px;
+    margin: 5px;
+    border: solid  2px #C5EFF7;
+    border-radius: 5px;
+    background-color: #E4F1FE;
+    overflow: hidden;
+    position: parent;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.persona:hover{
+    background-color: #C5EFF7;
+}

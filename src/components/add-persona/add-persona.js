@@ -1,4 +1,4 @@
-import { Persona } from "../Persona/persona";
+import { Persona } from "../persona/persona";
 
 export class AddPersonaController {
     constructor($scope){
@@ -7,18 +7,22 @@ export class AddPersonaController {
         this.state = 'valid';
 
         $scope.$watch(() => this.persona, (newObj) => {
-            this.state = 'valid';
             this.editPersona = newObj instanceof Persona ? true : false;
+        });
+
+        $scope.$on('successfullyadded', (event, isSuccess) => {
+            this.state = isSuccess ? 'success' : 'error';
+            setTimeout(() => { this.state = 'valid'; }, 500);
         });
     }
 
     addPersona(){
         this.save({ $persona: this.persona});
         this.cancel();
-        this.state = 'success';
     }
 
     selectNone(){
+        this.state = 'valid';
         this.cancel();
     }
 }

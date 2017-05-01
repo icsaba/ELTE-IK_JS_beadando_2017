@@ -1,14 +1,14 @@
-import { AddPersonaController } from './addPersona/add-persona';
-import { MainController } from './personaApp/main-controller';
-import { PersonaController } from './Persona/persona-controller';
+import { AddPersonaController } from './components/add-persona/add-persona';
+import { PersonaAppController } from './components/persona-app/persona-app';
+import { PersonaController } from './components/persona/persona-controller';
 
 angular.module('persona', [])
 .component('personaApp',{
-    templateUrl: 'personaApp/persona-app-view.html',
-    controller: MainController
+    templateUrl: 'components/persona-app/persona-app.html',
+    controller: PersonaAppController
 })
 .component('addPersona', {
-    templateUrl: 'addPersona/add-persona-view.html',
+    templateUrl: 'components/add-persona/add-persona.html',
     controller: AddPersonaController,
     bindings: {
         save: '&',
@@ -17,7 +17,7 @@ angular.module('persona', [])
     }
 })
 .component('persona',{
-    templateUrl: 'Persona/persona-view.html',
+    templateUrl: 'components/persona/persona.html',
     controller: PersonaController,
     bindings: {
         details: '<',
