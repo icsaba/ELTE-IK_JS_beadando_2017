@@ -18,7 +18,7 @@ export class AddPersonaController {
 
     addPersona(){
         this.save({ $persona: this.persona});
-        this.cancel();
+        this.persona = null;
     }
 
     selectNone(){
