@@ -5,11 +5,16 @@ Technologies:
  - webpack
  - angularjs 1
  - babel
- - koajs
+ - koajs - (Koa2)
  - mondogdb
+
+Just an update about Koa
+https://github.com/koajs/koa/blob/master/docs/migration.md
 
 npm install
 To build:
 npm run build
 Continuous development:
 npm start
+start koa server:
+npm run src/server

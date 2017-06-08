@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "src/server": "babel-node src/server.js"
   },
   "repository": {
     "type": "git",
@@ -20,17 +21,18 @@
   "homepage": "https://github.com/icsaba/ELTE-IK_JS_beadando_2017#readme",
   "dependencies": {
     "angular": "^1.6.2",
-    "angular-route": "^1.6.3",
     "angular-ui-bootstrap": "^2.5.0",
     "bootstrap": "^3.3.7",
+    "co-body": "^5.1.1",
     "koa": "^2.2.0",
-    "mongodb": "^2.2.26"
+    "koa-router2": "^1.0.0",
+    "mongoose": "^4.10.5"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-preset-env": "^1.2.1",
     "css-loader": "^0.28.0",
     "webpack": "^2.2.1",

@@ -15,5 +15,13 @@ module.exports = {
 			   loader: 'css-loader'
 			}
 		]
-	}
+	},
+    devServer: {
+        proxy: {
+          '/api': {
+            target: 'localhost:3000/',
+            secure: false
+          }
+        }
+  }
 };

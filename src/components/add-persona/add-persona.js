@@ -7,7 +7,7 @@ export class AddPersonaController {
         this.state = 'valid';
 
         $scope.$watch(() => this.persona, (newObj) => {
-            this.editPersona = newObj instanceof Persona ? true : false;
+            this.editPersona = newObj instanceof Persona;
         });
 
         $scope.$on('successfullyadded', (event, isSuccess) => {
