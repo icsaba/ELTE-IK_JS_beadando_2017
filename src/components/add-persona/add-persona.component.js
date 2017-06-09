@@ -5,12 +5,15 @@ export class AddPersonaController {
         this.genderOptions = ['male', 'female', 'other'];
         this.fields = ['firstName', 'lastName', 'email', 'gender'];
         this.state = 'valid';
-
-        $scope.$watch(() => this.persona, (newObj) => {
+        this.$scope = $scope;
+    }
+    
+    $onInit(){
+        this.$scope.$watch(() => this.persona, (newObj) => {
             this.editPersona = newObj instanceof Persona;
         });
 
-        $scope.$on('successfullyadded', (event, isSuccess) => {
+        this.$scope.$on('successfullyadded', (event, isSuccess) => {
             this.state = isSuccess ? 'success' : 'error';
             setTimeout(() => { this.state = 'valid'; }, 500);
         });
