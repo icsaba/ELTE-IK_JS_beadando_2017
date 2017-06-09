@@ -1,6 +1,8 @@
 # ELTE-IK_JS_beadando_2017
 JS midterm project on University of ELTE
+
 The code is written in ES6 and using babel to transpile.
+
 **Technologies:**
  - npm
  - webpack
